@@ -9,6 +9,8 @@ import { ProdutoRoutingModule } from "./produto.route";
 import { registerLocaleData } from "@angular/common";
 import localePt from '@angular/common/locales/pt';
 import { ProdutoCountComponent } from './componentes/produto-count/produto-count.component';
+import { EditarProdutoComponent } from './editar-produto/editar-produto.component';
+import { ProdutoAppComponent } from "./produto.app.component";
 
 registerLocaleData(localePt);
 
@@ -16,7 +18,9 @@ registerLocaleData(localePt);
     declarations: [
         ProdutoDashboardComponent,
         ProdutoCardDetalheComponent,
-        ProdutoCountComponent
+        ProdutoCountComponent,
+        EditarProdutoComponent,
+        ProdutoAppComponent
     ],
     imports: [
         CommonModule,

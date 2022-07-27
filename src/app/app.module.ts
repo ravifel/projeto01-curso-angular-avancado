@@ -34,7 +34,7 @@ import { NavegacaoModule } from './navegacao/navegacao.module';
     AppRoutingModule
   ],
   providers: [
-    { provide: APP_BASE_HREF, useValue: '/' }
+
   ],
   bootstrap: [AppComponent]
 })
