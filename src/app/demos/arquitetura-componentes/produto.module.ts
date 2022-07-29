@@ -12,6 +12,7 @@ import { ProdutoCountComponent } from './componentes/produto-count/produto-count
 import { EditarProdutoComponent } from './editar-produto/editar-produto.component';
 import { ProdutoAppComponent } from "./produto.app.component";
 import { ProdutoService } from "./services/produto.service";
+import { ProdutoResolveService } from "./services/produto-resolve.service";
 
 registerLocaleData(localePt);
 
@@ -28,7 +29,8 @@ registerLocaleData(localePt);
         ProdutoRoutingModule
     ],
     providers: [
-        ProdutoService
+        ProdutoService,
+        ProdutoResolveService
     ],
     exports: []
 })
