@@ -4,6 +4,7 @@ import { SobreComponent } from './institucional/sobre/sobre.component';
 import { CadastroComponent } from './demos/reactiveForms/cadastro/cadastro.component';
 import { NgModule } from '@angular/core';
 import { NotFoundComponent } from './navegacao/not-found/not-found.component';
+import { AuthGuard } from './services/app.guard';
 
 const rootRouterConfig: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -12,7 +13,14 @@ const rootRouterConfig: Routes = [
     { path: 'cadastro', component: CadastroComponent },
     {
         path: 'produtos',
-        loadChildren: () => import('./demos/arquitetura-componentes/produto.module').then(m => m.ProdutoModule)
+        loadChildren: () => import('./demos/arquitetura-componentes/produto.module')
+            .then(m => m.ProdutoModule)
+    },
+    {
+        path: 'admin',
+        loadChildren: () => import('./admin/admin.module')
+            .then(m => m.AdminModule),
+        canLoad: [AuthGuard], canActivate: [AuthGuard]
     },
 
     //TRATAÇÃO DO ERRO 404 - NOT FOUND
