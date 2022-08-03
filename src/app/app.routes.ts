@@ -7,6 +7,7 @@ import { NotFoundComponent } from './navegacao/not-found/not-found.component';
 
 import { AuthGuard } from './services/app.guard';
 import { CadastroGuard } from './services/cadastro.guard';
+import { FilmesComponent } from './demos/arquitetura-componentes/pipes/filmes/filmes.component';
 
 const rootRouterConfig: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -24,6 +25,7 @@ const rootRouterConfig: Routes = [
             .then(m => m.AdminModule),
         canLoad: [AuthGuard], canActivate: [AuthGuard]
     },
+    { path: 'filmes', component: FilmesComponent },
 
     //TRATAÇÃO DO ERRO 404 - NOT FOUND
     { path: '**', component: NotFoundComponent }

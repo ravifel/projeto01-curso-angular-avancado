@@ -19,6 +19,10 @@ import { NavegacaoModule } from './navegacao/navegacao.module';
 import { AuthGuard } from './services/app.guard';
 import { CadastroGuard } from './services/cadastro.guard';
 
+import localePt from '@angular/common/locales/pt';
+import { registerLocaleData } from "@angular/common";
+registerLocaleData(localePt);
+
 @NgModule({
   declarations: [
     AppComponent,
