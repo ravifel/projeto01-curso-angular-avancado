@@ -11,6 +11,7 @@ import { SobreComponent } from './institucional/sobre/sobre.component';
 import { AppRoutingModule } from './app.routes';
 
 import { CadastroComponent } from './demos/reactiveForms/cadastro/cadastro.component';
+import { FilmesComponent } from './demos/arquitetura-componentes/pipes/filmes/filmes.component';
 
 import { NgBrazil, TextMask } from 'ng-brazil';
 import { TextMaskModule } from 'angular2-text-mask';
@@ -20,10 +21,10 @@ import { AuthGuard } from './services/app.guard';
 import { CadastroGuard } from './services/cadastro.guard';
 
 import { FileSizePipe } from './demos/arquitetura-componentes/pipes/filmes/pipesCustomizados/filesize.pipe';
+import { ImageFormaterPipe } from './demos/arquitetura-componentes/pipes/filmes/pipesCustomizados/image.pipe';
 
 import localePt from '@angular/common/locales/pt';
 import { registerLocaleData } from "@angular/common";
-import { FilmesComponent } from './demos/arquitetura-componentes/pipes/filmes/filmes.component';
 registerLocaleData(localePt);
 
 @NgModule({
@@ -32,7 +33,8 @@ registerLocaleData(localePt);
     SobreComponent,
     CadastroComponent,
     FilmesComponent,
-    FileSizePipe
+    FileSizePipe,
+    ImageFormaterPipe
   ],
   imports: [
     BrowserModule,
