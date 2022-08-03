@@ -9,7 +9,7 @@ export class CadastroGuard implements CanDeactivate<CadastroComponent>{
     canDeactivate(component: CadastroComponent) {
         
         if (component.mudancasNaoSalvas == true) {
-            return window.confirm('Tem certeza que deseja abandonar o preenchimento do formulário?     ');
+            return window.confirm('Tem certeza que deseja abandonar o preenchimento do formulário?');
         }
         return true;
         

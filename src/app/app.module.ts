@@ -19,15 +19,20 @@ import { NavegacaoModule } from './navegacao/navegacao.module';
 import { AuthGuard } from './services/app.guard';
 import { CadastroGuard } from './services/cadastro.guard';
 
+import { FileSizePipe } from './demos/arquitetura-componentes/pipes/filmes/pipesCustomizados/filesize.pipe';
+
 import localePt from '@angular/common/locales/pt';
 import { registerLocaleData } from "@angular/common";
+import { FilmesComponent } from './demos/arquitetura-componentes/pipes/filmes/filmes.component';
 registerLocaleData(localePt);
 
 @NgModule({
   declarations: [
     AppComponent,
     SobreComponent,
-    CadastroComponent
+    CadastroComponent,
+    FilmesComponent,
+    FileSizePipe
   ],
   imports: [
     BrowserModule,

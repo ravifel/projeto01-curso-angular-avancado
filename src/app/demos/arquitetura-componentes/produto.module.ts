@@ -11,7 +11,6 @@ import { EditarProdutoComponent } from './editar-produto/editar-produto.componen
 import { ProdutoAppComponent } from "./produto.app.component";
 import { ProdutoService } from "./services/produto.service";
 import { ProdutoResolveService } from "./services/produto-resolve.service";
-import { FilmesComponent } from './pipes/filmes/filmes.component';
 
 
 import localePt from '@angular/common/locales/pt';
@@ -24,8 +23,7 @@ registerLocaleData(localePt);
         ProdutoCardDetalheComponent,
         ProdutoCountComponent,
         EditarProdutoComponent,
-        ProdutoAppComponent,
-        FilmesComponent
+        ProdutoAppComponent
     ],
     imports: [
         CommonModule,
