@@ -57,7 +57,10 @@ export const BAR_PROVIDERS: Provider[] = [
     ReactiveFormsModule,
     NavegacaoModule,
     AppRoutingModule,
-    BarModule
+    BarModule.forRoot({
+      unidadeId: 1000,
+      unidadeToken: 'ee4546egeube7879eee'
+    })
   ],
   providers: [
     AuthGuard,
