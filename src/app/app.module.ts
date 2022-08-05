@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, Provider } from '@angular/core';
 import { APP_BASE_HREF } from '@angular/common';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -26,9 +26,17 @@ import { ImageFormaterPipe } from './demos/arquitetura-componentes/pipes/filmes/
 import localePt from '@angular/common/locales/pt';
 import { registerLocaleData } from "@angular/common";
 import { BarModule } from './demos/bar-di-zones/bar.module';
+import { BarService } from './demos/bar-di-zones/bar.service';
+import { HttpClientModule } from '@angular/common/http';
 registerLocaleData(localePt);
 
-
+//aqui dentro podem ficar todos os providers que quiser colocar dentro
+//coleção de providers especifica do Bar
+//é positivo para a organização
+//depois é só declarar a constante no providers
+export const BAR_PROVIDERS: Provider[] = [
+  BarService
+];
 
 @NgModule({
   declarations: [
@@ -41,6 +49,7 @@ registerLocaleData(localePt);
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     FormsModule,
     TextMask.TextMaskModule,
     NgBrazil,
@@ -52,7 +61,8 @@ registerLocaleData(localePt);
   ],
   providers: [
     AuthGuard,
-    CadastroGuard
+    CadastroGuard,
+    //BAR_PROVIDERS
   ],
   bootstrap: [AppComponent]
 })

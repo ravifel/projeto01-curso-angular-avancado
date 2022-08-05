@@ -19,3 +19,18 @@ export class BarService {
         return 'Refeições';
     }
 }
+
+export class BarServiceMock {
+
+    obterBebidas(): string {
+        return 'Mock';
+    }
+
+    obterPorcoes(): string {
+        return 'Mock';
+    }
+
+    obterRefeicoes(): string {
+        return 'Mock';
+    }
+}
