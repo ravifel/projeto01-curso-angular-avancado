@@ -8,6 +8,7 @@ import { NotFoundComponent } from './navegacao/not-found/not-found.component';
 import { AuthGuard } from './services/app.guard';
 import { CadastroGuard } from './services/cadastro.guard';
 import { FilmesComponent } from './demos/arquitetura-componentes/pipes/filmes/filmes.component';
+import { BarDiZonesComponent } from './demos/bar-di-zones/bar-di-zones.component';
 
 const rootRouterConfig: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -26,6 +27,7 @@ const rootRouterConfig: Routes = [
         canLoad: [AuthGuard], canActivate: [AuthGuard]
     },
     { path: 'filmes', component: FilmesComponent },
+    { path: 'bar', component: BarDiZonesComponent },
 
     //TRATAÇÃO DO ERRO 404 - NOT FOUND
     { path: '**', component: NotFoundComponent }

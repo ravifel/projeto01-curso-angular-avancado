@@ -25,7 +25,10 @@ import { ImageFormaterPipe } from './demos/arquitetura-componentes/pipes/filmes/
 
 import localePt from '@angular/common/locales/pt';
 import { registerLocaleData } from "@angular/common";
+import { BarModule } from './demos/bar-di-zones/bar.module';
 registerLocaleData(localePt);
+
+
 
 @NgModule({
   declarations: [
@@ -44,7 +47,8 @@ registerLocaleData(localePt);
     CustomFormsModule,
     ReactiveFormsModule,
     NavegacaoModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BarModule
   ],
   providers: [
     AuthGuard,
