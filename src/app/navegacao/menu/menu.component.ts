@@ -48,6 +48,12 @@ export class MenuComponent {
       name: 'Bar',
       exact: false,
       admin: false
+    },
+    {
+      link: '/todo',
+      name: 'To Do',
+      exact: false,
+      admin: false
     }
   ]
 }

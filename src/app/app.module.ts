@@ -25,10 +25,12 @@ import { ImageFormaterPipe } from './demos/arquitetura-componentes/pipes/filmes/
 
 import localePt from '@angular/common/locales/pt';
 import { registerLocaleData } from "@angular/common";
+registerLocaleData(localePt);
+
 import { BarModule } from './demos/bar-di-zones/bar.module';
 import { BarService } from './demos/bar-di-zones/bar.service';
 import { HttpClientModule } from '@angular/common/http';
-registerLocaleData(localePt);
+import { TodoModule } from './demos/todo-list/todo.module';
 
 //aqui dentro podem ficar todos os providers que quiser colocar dentro
 //coleção de providers especifica do Bar
@@ -60,7 +62,8 @@ export const BAR_PROVIDERS: Provider[] = [
     BarModule.forRoot({
       unidadeId: 1000,
       unidadeToken: 'ee4546egeube7879eee'
-    })
+    }),
+    TodoModule
   ],
   providers: [
     AuthGuard,
