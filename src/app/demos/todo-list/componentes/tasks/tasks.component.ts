@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { TaskService } from '../../todo.service';
 
 @Component({
   selector: 'tasks',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TasksComponent implements OnInit {
 
-  constructor() { }
+  todoList$: Observable<any>
+
+  constructor(private taskService: TaskService) { }
 
   ngOnInit() {
+    this.todoList$ = this.taskService.getToDoList$;
   }
 
 }
