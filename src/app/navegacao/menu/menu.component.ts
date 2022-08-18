@@ -32,12 +32,6 @@ export class MenuComponent {
       admin: false
     },
     {
-      link: '/admin',
-      name: 'Admin',
-      exact: false,
-      admin: false
-    },
-    {
       link: '/filmes',
       name: 'Filmes',
       exact: false,
@@ -52,6 +46,12 @@ export class MenuComponent {
     {
       link: '/todo',
       name: 'To Do',
+      exact: false,
+      admin: false
+    },
+    {
+      link: '/admin',
+      name: 'Admin',
       exact: false,
       admin: false
     }

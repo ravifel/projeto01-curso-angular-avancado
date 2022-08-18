@@ -8,6 +8,7 @@ import { TasksComponent } from './componentes/tasks/tasks.component';
 import { TasksIniciadasComponent } from './componentes/tasks-iniciadas/tasks-iniciadas.component';
 import { TasksFinalizadasComponent } from './componentes/tasks-finalizadas/tasks-finalizadas.component';
 import { TaskService } from './todo.service';
+import { Store } from './todo.store';
 
 
 
@@ -24,7 +25,8 @@ import { TaskService } from './todo.service';
     HttpClientModule
   ],
   providers: [
-    TaskService
+    TaskService,
+    Store
   ],
   exports: [
     TodoComponent,
