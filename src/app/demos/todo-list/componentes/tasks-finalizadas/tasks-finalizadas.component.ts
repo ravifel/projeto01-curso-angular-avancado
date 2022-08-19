@@ -26,4 +26,8 @@ export class TasksFinalizadasComponent implements OnInit {
       );
   }
 
+  onToggle(event) {
+    this.taskService.toggle(event);
+  }
+
 }
